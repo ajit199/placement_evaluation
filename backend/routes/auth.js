@@ -12,7 +12,8 @@ authRouter.post("/register", async (req, res) => {
 
 authRouter.post("/login", async (req, res) => {
   let response = await loginUser(req.body);
-  if (response.status === "Error") return res.send(response.message);
+  if (response.status === "Error")
+    return res.send({ message: response.message });
   let token = jwt.sign(
     { name: response?.user?.name, email: response?.user?.email },
     process.env.SECRET_KEY,

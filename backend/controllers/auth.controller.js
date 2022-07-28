@@ -22,7 +22,7 @@ async function loginUser({ email, password }) {
     let user = await Manager.findOne({ email });
     if (user)
       return {
-        message: "User is logged in successfully.",
+        message: "You have logged in successfully.",
         status: "Success",
         user,
       };

@@ -1,14 +1,22 @@
 
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Flat } from "../../components/flat/Flat";
+import { getApartments } from "../../redux/actions";
 import "./flats.css";
 export function Flats() {
 
+    let { apartments } = useSelector((state) => state);
+    let dispatch = useDispatch();
+    useEffect(() => {
+        getApartments(dispatch)
+    }, [])
     return (
         <div className="flats">
             <div className="flatsWrapper">
-                <Flat />
-                <Flat />
-                <Flat />
+                {apartments && apartments.map(apartment => {
+                    return <Flat key={apartment?._id} apartment={apartment} />
+                })}
             </div>
             <div className="flatsNavigateButtons">
                 <button className="flatsNavigateButton">Prev</button>
