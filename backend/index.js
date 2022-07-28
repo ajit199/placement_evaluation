@@ -1,11 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const authRouter = require("./routes/auth");
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use("/api/auth", authRouter);
 // connect to Mongo DB
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, () => {
   console.log("Connected to MongoDB.");
