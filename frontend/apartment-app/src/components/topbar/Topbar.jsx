@@ -10,11 +10,17 @@ export function Topbar() {
             </div>
             <div className="topbarCenter">
                 <div className="searchbar">
-                    <Search className="searchIcon" />
+                    <i className="fa-solid fa-magnifying-glass searchIcon"></i>
                     <input placeholder="Search By Block Name" className="searchInput" />
                 </div>
             </div>
-            <div className="topbarRight"></div>
+            <div className="topbarRight">
+                <div className="topbarLinks">
+                    <div className="topbarLink">Home</div>
+                    <div className="topbarLink">Flats</div>
+                    <div className="topbarLink">About</div>
+                </div>
+            </div>
         </div>
     )
 }

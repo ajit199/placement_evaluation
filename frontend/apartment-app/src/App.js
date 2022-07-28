@@ -1,8 +1,11 @@
 import "./App.css";
+import { Home } from "./pages/Home";
+import { Register } from "./pages/register/Register";
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      {/* <Home /> */}
+      <Register />
     </div>
   );
 }

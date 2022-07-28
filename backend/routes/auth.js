@@ -2,6 +2,7 @@ const authRouter = require("express").Router();
 const { registerUser, loginUser } = require("../controllers/auth.controller");
 const Manager = require("../models/Manager.model");
 let jwt = require("jsonwebtoken");
+
 authRouter.post("/register", async (req, res) => {
   let { message, status } = await registerUser(req.body);
   if (status === "Error") return res.send(message);
