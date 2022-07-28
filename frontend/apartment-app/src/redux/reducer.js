@@ -1,4 +1,9 @@
-import { GET_APARTMENTS, IS_ERROR, IS_LOADING } from "./actionTypes";
+import {
+  GET_APARTMENTS,
+  IS_ERROR,
+  IS_LOADING,
+  FILTER_FLATS,
+} from "./actionTypes";
 
 const initState = {
   apartments: [],
@@ -23,6 +28,14 @@ export const reducer = (state = initState, action) => {
         totalApartments: action.payload.totalApartments,
       };
     }
+    case FILTER_FLATS: {
+      return {
+        ...state,
+        apartments: action.payload.apartments,
+        totalApartments: action.payload.totalApartments,
+      };
+    }
+
     case IS_ERROR:
       return {
         ...state,

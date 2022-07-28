@@ -40,5 +40,129 @@
             "name": "Galaxy Apartment",
             "image": "https://im.proptiger.com/1/1889742/6/code-name-million-carats-elevation-32542115.jpeg"
         }
+    ],
+    "Flat": [
+        {
+            "type": "owner",
+            "block": "A",
+            "flatNo": 102,
+            "apartmentId": "62e2240ac15531ba2d3fc2fd"
+        },
+        {
+            "type": "owner",
+            "block": "A",
+            "flatNo": 102,
+            "apartmentId": "62e2240ac15531ba2d3fc2fd"
+        },
+        {
+            "type": "owner",
+            "block": "B",
+            "flatNo": 204,
+            "apartmentId": "62e2240ac15531ba2d3fc2ff"
+        },
+        {
+            "type": "owner",
+            "block": "B",
+            "flatNo": 302,
+            "apartmentId": "62e2240ac15531ba2d3fc2fd"
+        },
+        {
+            "type": "owner",
+            "block": "D",
+            "flatNo": 202,
+            "apartmentId": "62e2240ac15531ba2d3fc2ff"
+        },
+        {
+            "type": "tenant",
+            "block": "D",
+            "flatNo": 112,
+            "apartmentId": "62e2240ac15531ba2d3fc2ff"
+        },
+        {
+            "type": "tenant",
+            "block": "C",
+            "flatNo": 222,
+            "apartmentId": "62e2240ac15531ba2d3fc2fe"
+        },
+        {
+            "type": "tenant",
+            "block": "A",
+            "flatNo": 202,
+            "apartmentId": "62e2240ac15531ba2d3fc2fe"
+        },
+        {
+            "type": "tenant",
+            "block": "D",
+            "flatNo": 407,
+            "apartmentId": "62e2240ac15531ba2d3fc2ff"
+        },
+        {
+            "type": "tenant",
+            "block": "B",
+            "flatNo": 502,
+            "apartmentId": "62e2240ac15531ba2d3fc2fe"
+        }
+    ],
+    "resident": [
+        {
+            "name": "Ajit",
+            "gender": "Male",
+            "age": 23,
+            "flatId": "62e27828c15531ba2d3fc307"
+        },
+        {
+            "name": "Amit",
+            "gender": "Male",
+            "age": 25,
+            "flatId": "62e27828c15531ba2d3fc308"
+        },
+        {
+            "name": "Yogesh",
+            "gender": "Male",
+            "age": 45,
+            "flatId": "62e27828c15531ba2d3fc309"
+        },
+        {
+            "name": "Aasif",
+            "gender": "Male",
+            "age": 33,
+            "flatId": "62e27828c15531ba2d3fc30a"
+        },
+        {
+            "name": "Najmush",
+            "gender": "Male",
+            "age": 13,
+            "flatId": "62e27828c15531ba2d3fc30b"
+        },
+        {
+            "name": "Akay",
+            "gender": "Male",
+            "age": 12,
+            "flatId": "62e27828c15531ba2d3fc30c"
+        },
+        {
+            "name": "Alina",
+            "gender": "Female",
+            "age": 24,
+            "flatId": "62e27828c15531ba2d3fc30d"
+        },
+        {
+            "name": "Sonia",
+            "gender": "Female",
+            "age": 23,
+            "flatId": "62e27828c15531ba2d3fc30e"
+        },
+        {
+            "name": "John",
+            "gender": "Male",
+            "age": 33,
+            "flatId": "62e27828c15531ba2d3fc30f"
+        },
+        {
+            "name": "James",
+            "gender": "Male",
+            "age": 25,
+            "flatId": "62e27828c15531ba2d3fc310"
+        }
     ]
 }

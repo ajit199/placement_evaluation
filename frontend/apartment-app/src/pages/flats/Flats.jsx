@@ -5,35 +5,40 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Flat } from "../../components/flat/Flat";
-import { getApartments } from "../../redux/actions";
+import { getApartments, getFilteredApartments } from "../../redux/actions";
 import "./flats.css";
 const limit = 3;
 export function Flats() {
     let [page, setPage] = useState(1);
+    let [data, setData] = useState([]);
     let { apartments, totalApartments } = useSelector((state) => state);
     let dispatch = useDispatch();
     useEffect(() => {
         getApartments(dispatch, page, limit)
+        // setData(apartments)
     }, [page])
     const totalPages = useRef(Math.ceil(totalApartments / limit));
 
-    function handleFilter(event) {
-        let type = event.target.value
-        axios("http://localhost:5500/api/apartments/" + type)
-
-    }
-    async function handleSort(event) {
+    // function handleFilter(event) {
+    //     let type = event.target.value;
+    //     getFilteredApartments(dispatch, type);
+    // }
+    function handleSort(event) {
         let type = event.target.value
         axios("http://localhost:5500/api/apartments/")
+            .then(res => {
+                setData(res.data.apartments);
+                totalPages.current = res.data.totalApartments;
+            }).catch(error => console.log(error))
     }
     return (
         <>
             <div className="flatFilterSection">
-                <select className="flatFilter" onChange={handleFilter}>
+                {/* <select className="flatFilter" onChange={handleFilter}>
                     <option defaultValue>Select Resident Type</option>
                     <option value="owner">Owner</option>
                     <option value="tenant">Tenant</option>
-                </select>
+                </select> */}
                 <select className="flatSort" onChange={handleSort}>
                     <option defaultValue>Sort By Flat No.</option>
                     <option value="low">Low to High</option>
