@@ -1,0 +1,16 @@
+.flatDetails {
+  width: 40%;
+  margin: 20px auto;
+}
+
+.flatDetails table {
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px 30px;
+}

@@ -1,6 +1,6 @@
 import axios from "axios";
 import {
-  FILTER_FLATS,
+  FLAT_DETAIL,
   GET_APARTMENTS,
   IS_ERROR,
   IS_LOADING,
@@ -26,17 +26,31 @@ export const getApartments = (dispatch, page = 1, limit = 10) => {
   }
 };
 
-export const getFilteredApartments = (dispatch, type) => {
+// export const getFilteredApartments = (dispatch, type) => {
+//   try {
+//     dispatch({ type: IS_LOADING });
+//     axios(base_url + "/apartments/" + type)
+//       .then((res) => {
+//         dispatch({
+//           type: FILTER_FLATS,
+//           payload: res.data,
+//         });
+//       })
+//       .catch((error) => dispatch({ type: IS_ERROR }));
+//   } catch (error) {
+//     dispatch({ type: IS_ERROR });
+//   }
+// };
+
+export const flatDetails = (dispatch, id) => {
   try {
     dispatch({ type: IS_LOADING });
-    axios(base_url + "/apartments/" + type)
-      .then((res) => {
-        dispatch({
-          type: FILTER_FLATS,
-          payload: res.data,
-        });
-      })
-      .catch((error) => dispatch({ type: IS_ERROR }));
+    axios.get(base_url + "/apartments/" + id).then((res) => {
+      dispatch({
+        type: FLAT_DETAIL,
+        payload: res.data.residents,
+      });
+    });
   } catch (error) {
     dispatch({ type: IS_ERROR });
   }

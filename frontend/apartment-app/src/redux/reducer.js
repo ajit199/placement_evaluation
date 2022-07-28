@@ -3,6 +3,7 @@ import {
   IS_ERROR,
   IS_LOADING,
   FILTER_FLATS,
+  FLAT_DETAIL,
 } from "./actionTypes";
 
 const initState = {
@@ -19,6 +20,7 @@ export const reducer = (state = initState, action) => {
         isLoading: true,
         isError: false,
         apartments: [],
+        residents: [],
         totalApartments: 0,
       };
     case GET_APARTMENTS: {
@@ -33,6 +35,13 @@ export const reducer = (state = initState, action) => {
         ...state,
         apartments: action.payload.apartments,
         totalApartments: action.payload.totalApartments,
+      };
+    }
+
+    case FLAT_DETAIL: {
+      return {
+        ...state,
+        residents: action.payload,
       };
     }
 

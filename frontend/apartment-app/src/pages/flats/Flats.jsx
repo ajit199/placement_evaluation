@@ -23,14 +23,14 @@ export function Flats() {
     //     let type = event.target.value;
     //     getFilteredApartments(dispatch, type);
     // }
-    function handleSort(event) {
-        let type = event.target.value
-        axios("http://localhost:5500/api/apartments/")
-            .then(res => {
-                setData(res.data.apartments);
-                totalPages.current = res.data.totalApartments;
-            }).catch(error => console.log(error))
-    }
+    // function handleSort(event) {
+    //     let type = event.target.value
+    //     axios("http://localhost:5500/api/apartments/")
+    //         .then(res => {
+    //             setData(res.data.apartments);
+    //             totalPages.current = res.data.totalApartments;
+    //         }).catch(error => console.log(error))
+    // }
     return (
         <>
             <div className="flatFilterSection">
