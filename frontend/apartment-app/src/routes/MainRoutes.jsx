@@ -10,7 +10,7 @@ export function MainRoutes() {
         <>
             <Routes>
                 <Route index path="/" element={<Home />} />
-                <Route index path="/apartments/:id" element={token ? <FlatDetails /> : <Login />} />
+                <Route index path="/apartments/:id" element={<FlatDetails />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={token ? <Home /> : <Login />} />
             </Routes>

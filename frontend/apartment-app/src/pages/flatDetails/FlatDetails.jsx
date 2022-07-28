@@ -1,7 +1,7 @@
 
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { flatDetails } from "../../redux/actions";
 import "./flatDetails.css";
 export function FlatDetails() {
@@ -11,6 +11,10 @@ export function FlatDetails() {
         flatDetails(dispatch, id)
     }, [])
     let { residents } = useSelector((store) => store);
+
+    let token = localStorage.getItem("token");
+
+    if (!token) return <Navigate to={"/login"} replace={true} />
     return (
         <div className="flatDetails">
             {residents.length === 0 ? <h1>No Residents</h1> :
