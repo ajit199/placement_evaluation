@@ -39,7 +39,8 @@ export function Flats() {
                     <option value="owner">Owner</option>
                     <option value="tenant">Tenant</option>
                 </select> */}
-                <select className="flatSort" onChange={handleSort}>
+                {/* onChange={handleSort} */}
+                <select className="flatSort">
                     <option defaultValue>Sort By Flat No.</option>
                     <option value="low">Low to High</option>
                     <option value="high">High to Low</option>
