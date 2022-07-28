@@ -14,11 +14,13 @@ export const reducer = (state = initState, action) => {
         isLoading: true,
         isError: false,
         apartments: [],
+        totalApartments: 0,
       };
     case GET_APARTMENTS: {
       return {
         ...state,
-        apartments: action.payload,
+        apartments: action.payload.apartments,
+        totalApartments: action.payload.totalApartments,
       };
     }
     case IS_ERROR:

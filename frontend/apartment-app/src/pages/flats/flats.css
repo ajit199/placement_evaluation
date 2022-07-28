@@ -22,3 +22,14 @@
 .flatsNavigateButton:focus {
   outline: none;
 }
+
+#active {
+  background-color: skyblue;
+  color: black;
+}
+
+.flatFilterSection {
+  float: right;
+  margin-top: 10px;
+  width: 40%;
+}
